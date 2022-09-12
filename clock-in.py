@@ -123,6 +123,9 @@ class ClockIn(object):
         
         # 2022.07.05
         new_info['internship'] = 2  # 今日是否进行实习或实践
+        
+        # 2022.09.12
+        new_info['ismoved'] = 2 # 今日是否有离开校区所在城市的外出安排 
 
         # 2021.08.05 Fix 2
         magics = re.findall(r'"([0-9a-f]{32})":\s*"([^\"]+)"', html)
