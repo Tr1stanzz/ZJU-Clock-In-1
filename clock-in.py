@@ -105,8 +105,8 @@ class ClockIn(object):
         new_info['number'] = number
         new_info["date"] = self.get_date()
         new_info["created"] = round(time.time())
-        new_info["address"] = "上海市上海市徐汇区"
-        new_info["area"] = "上海市 徐汇区"
+        new_info["address"] = "浙江省杭州市西湖区"
+        new_info["area"] = "浙江省 杭州市 西湖区"
         new_info["province"] = new_info["area"].split(' ')[0]
         new_info["city"] = new_info["area"].split(' ')[1]
         # form change
@@ -123,10 +123,7 @@ class ClockIn(object):
         # new_info['verifyCode'] = self.get_captcha() # 验证码识别（已取消）
         
         # 2022.07.05
-        new_info['internship'] = 2  # 今日是否进行实习或实践
-        
-        # 2022.09.12
-        new_info['ismoved'] = 2 # 今日是否有离开校区所在城市的外出安排 
+        new_info['internship'] = 3  # 今日是否进行实习或实践
 
         # 2021.08.05 Fix 2
         magics = re.findall(r'"([0-9a-f]{32})":\s*"([^\"]+)"', html)
